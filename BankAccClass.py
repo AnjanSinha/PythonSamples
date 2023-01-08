@@ -20,6 +20,8 @@ class Account():
             print("Withdrawl of Rs. {} successfull. Current Balance Rs. {}.".format(witamount,self.balance))
     
 def selection():
+    choice = int(input("Enter 1 for Deposit.\nEnter 2 for Withdrawl.\nEnter 3 for Balance Enquiry.\n"))
+
     if choice==1:
         value = int(input("Enter the amount you want to deposit : "))
         bankAcc.deposit(value)
@@ -35,6 +37,4 @@ def selection():
         print("Invalid Choice")
 
 bankAcc = Account("Anjan", 100)
-
-choice = int(input("Enter 1 for Deposit.\nEnter 2 for Withdrawl.\nEnter 3 for Balance Enquiry.\n"))
 selection()
